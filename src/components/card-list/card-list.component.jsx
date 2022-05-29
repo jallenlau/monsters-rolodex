@@ -1,3 +1,18 @@
+import Card from '../card/card.component'
+import './card-list.styles.css'
+
+const CardList = ({ monsters }) => ( /*此处用（）代替 {} 是因为隐藏了 return()*/
+    <div className='card-list'>
+        {monsters.map((monster) => {
+            return <Card card={monster} key={monster.id} />
+        })}
+    </div>
+);
+    
+export default CardList;
+
+//built in class components
+/*
 import { Component } from "react";
 import Card from '../card/card.component'
 import './card-list.styles.css'
@@ -20,4 +35,5 @@ class CardList extends Component {
 }
 
 export default CardList;
+*/
 
