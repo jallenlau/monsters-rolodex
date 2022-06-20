@@ -1,7 +1,13 @@
 import Card from '../card/card.component'
 import './card-list.styles.css'
 
-const CardList = ({ monsters }) => ( /*此处用（）代替 {} 是因为隐藏了 return()*/
+import { Monster } from '../../App'
+
+type CardListProps = {
+    monsters: Monster[];
+}
+
+const CardList = ({ monsters }: CardListProps) => ( /*此处用（）代替 {} 是因为隐藏了 return()*/
     <div className='card-list'>
         {monsters.map((monster) => {
             return <Card card={monster} key={monster.id} />

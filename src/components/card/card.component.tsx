@@ -1,6 +1,11 @@
+import { Monster } from '../../App';
 import './card.styles.css';
 
-const Card = ({ card }) => { //Line3
+type CardProps = {
+    card: Monster;
+}
+
+const Card = ({ card }: CardProps) => { //Line3
     const { id, name, email } = card; //如果省略此行，需将Line3替换为{card:{id, name, email}}
     return (
     <div className='card-container'>
